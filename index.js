@@ -12,7 +12,7 @@ module.exports = async function (connection, cb) {
         const https = !options || !options.hasOwnProperty('ssl') || options.ssl === 'true';
         const port = host.port || (https ? 443 : 80)
         const url = UrlBuilder.create(host.host, port, https).addPath(username).addPath(endpoint)
-            .addPath(password).addPath('.env').build()
+            .addPath(password + '.env').build()
         const resp = await request.get(url)
         dp.parse(dotenv.parse(resp), {overrideProcessEnv: true})
         cb && cb(undefined);
