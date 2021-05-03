@@ -1,6 +1,6 @@
 {
     "name": "@zicenter/config-client",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Zicenter Config Client",
     "main": "index.js",
     "scripts": {
